@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Window</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+    }
+    .overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(20, 40, 60, 0.4);
+      z-index: 1;
+    }
+    .login-box {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(0,0,0,0.6);
+      padding: 40px 40px 30px 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 30px #0008;
+      width: 400px;
+      z-index: 2;
+      text-align: center;
+    }
+    .avatar {
+      width: 120px;
+      height: 120px;
+      background: #e74c3c;
+      border-radius: 50%;
+      margin: -90px auto 20px auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 6px solid #fff;
+      overflow: hidden;
+    }
+    .avatar svg {
+      width: 80px;
+      height: 80px;
+      display: block;
+    }
+    .login-title {
+      color: #fff;
+      font-size: 1.5em;
+      font-weight: bold;
+      margin-bottom: 30px;
+      margin-top: 10px;
+      letter-spacing: 1px;
+      font-family: 'Times New Roman', Times, serif;
+    }
+    .login-box input[type="email"],
+    .login-box input[type="password"] {
+      width: 100%;
+      padding: 12px 10px;
+      margin: 10px 0;
+      background: transparent;
+      border: none;
+      border-bottom: 2px solid #fff;
+      color: #fff;
+      font-size: 1em;
+      outline: none;
+    }
+    .login-box input[type="email"]::placeholder,
+    .login-box input[type="password"]::placeholder {
+      color: #ccc;
+      opacity: 1;
+    }
+    .checkbox-label {
+      color: #fff;
+      font-size: 1em;
+      display: flex;
+      align-items: center;
+      margin: 18px 0 20px 0;
+      justify-content: left;
+    }
+    .checkbox-label input[type="checkbox"] {
+      margin-right: 8px;
+      accent-color: #2ecc40;
+    }
+    .checkbox-label a {
+      color: #fff;
+      text-decoration: underline;
+      margin-left: 4px;
+    }
+    .login-box button {
+      width: 100%;
+      padding: 12px 0;
+      background: #19b319;
+      color: #fff;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 10px;
+      transition: background 0.2s;
+    }
+    .login-box button:hover {
+      background: #0e8c0e;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay"></div>
+  <form class="login-box">
+    <div class="avatar">
+      <!-- SVG avatar illustration -->
+      <svg viewBox="0 0 64 64">
+        <circle cx="32" cy="32" r="32" fill="#e74c3c"/>
+        <ellipse cx="32" cy="28" rx="14" ry="14" fill="#ffe0bd"/>
+        <ellipse cx="32" cy="54" rx="18" ry="10" fill="#fff"/>
+        <rect x="22" y="38" width="20" height="8" rx="4" fill="#fff"/>
+        <rect x="26" y="38" width="12" height="8" rx="4" fill="#3b2314"/>
+        <rect x="24" y="24" width="16" height="8" rx="4" fill="#fff"/>
+        <rect x="28" y="24" width="8" height="8" rx="4" fill="#3b2314"/>
+      </svg>
+    </div>
+    <div class="login-title">LOGIN WINDOW</div>
+    <input type="email" placeholder="Your Email Address" required>
+    <input type="password" placeholder="Your Password" required>
+    <div class="checkbox-label">
+      <input type="checkbox" required>
+      Agree With <a href="#">Terms & Condition</a>
+    </div>
+    <button type="submit">Login</button>
+  </form>
+</body>
+</html>
